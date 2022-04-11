@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/aedd297eaa.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Roboto:ital,wght@0,300;0,400;1,900&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+        }
+        :root{
+            --pSize: 13px;
+            --h1Size: 50px;
+        }
+        p, a{
+            font-size: var(--pSize);
+        }
+        header{
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(to left top, #141216, #131017, #120e19, #0f0d1a, #0c0b1c);
+            color: #ededed;
+            padding: 2% 5%;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        nav ul{
+            display: flex;
+        }
+        nav ul li{
+            list-style: none;
+            padding-left: 20px;
+        }
+        nav a{
+            color: inherit;
+        }
+        .menu-icon{
+            display: none;
+        }
+        .logo{
+            font-size: 30px;
+        }
+        .logo-half{
+            color: #45de66;
+        }
+        .btn{
+            background: #ededed;
+            color: #0c0b1c;
+            padding: 10px;
+            border-radius: 15px;
+            transition: 1s;
+        }
+        .btn:hover{
+            background: #45de66;
+            color: #ededed;
+        }
+        
+        .main-page{
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+        .main-right, .main-left{
+            flex: 1 1 40%;
+        }
+        .main-left{
+            align-self: center;
+        }
+        .main-right img{
+            max-width: 550px;
+            margin-top: 10px;
+            display: block;
+        }
+        .main-left h1{
+            margin-bottom: 50px;
+            font-size: var(--h1Size);
+
+        }
+
+        .scroll-up, .scroll-up a{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #45de66;
+            position: fixed;
+            bottom: 5px;
+            right: 5px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+
+        @media (max-width:650px){
+            :root{
+                --pSize: 10px;
+                --h1Size: 30px;
+            }
+            .main-page{
+                margin-top: 40px;
+                display: block;
+            }
+            .main-left h1{
+                margin-bottom: 30px;
+            }
+            .main-right img{
+                display: block;
+                width: 300px;
+                margin: auto;
+            }
+            /*
+            nav{
+                display: block;
+                padding: 0;
+            }
+            nav ul{
+                display: block;
+                width: 100%;
+                padding: 0;
+            }
+            nav ul li{
+                text-align: center;
+                display: block;
+                padding: 8px 0;
+            }
+            */
+
+            .dropdown {
+                position: relative;
+                display: block;
+            }
+
+            p.menu-icon{
+                display: block;
+            }
+
+            .menu-item {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown:hover .menu-item {
+                display: block;
+                width: 70px;
+                right: 5px;
+                background: rgba(0,0,0,0.8);
+                padding-bottom: 5px;
+                border-radius: 5px;
+            }
+            .dropdown:hover .menu-item li{
+                padding: 10px;
+            }
+        }
+
+            /* Menu */
+
+                            
+                .menu {
+                    padding: 3% 15%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-gap: 10% 5%;
+                }
+
+                .food-item {
+                    position: relative;
+                    background-image: linear-gradient(to right top, #767478, #817f85, #8d8b91, #98969f, #a3a2ac);
+                    height: 30vh;
+                    width: 100%;
+                    border-radius: 15px;
+                    padding: 10%;
+                    transition: transform 1s;
+                    box-shadow: 0 0px 0px 0 rgb(60 64 67 / 30%), 0 0px 0px 1px rgb(60 64 67 / 15%);
+                }
+
+                .food-item:hover {
+                    transform: scale(1.2);
+                    z-index: 3;
+                    opacity: 1;
+                }
+
+                .food-item img {
+                    width: 100%;
+                    height: auto;
+                    box-shadow: 0 0 5px black;
+                    background: white;
+                    transition: transform 1s;
+                }
+                
+                .food-item img:hover{
+                    transform: scale(1.5);
+                }
+                .menu .food-item h6 {
+                    font-size: 20px;
+                    text-align: center;
+                    color: white;
+                }
+
+
+                /* footer */
+
+                footer {
+                    margin-top: 3%;
+                    padding: 2% 5%;
+                }
+
+                .footer-top {
+                    padding: 3%;
+                    display: grid;
+                    grid-gap: 8%;
+                    text-align: justify;
+                    grid-template-columns: 1.9fr 1.3fr 1fr 1fr;
+                    border-bottom: 3px solid #003c7a;
+                }
+
+                .footer-top h6 {
+                    font-size: 1.1rem;
+                    margin-bottom: 2%;
+                }
+
+                .footer-top>div {
+                    padding: 0 2%;
+                }
+
+                .subscribe-form form {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .social-links {
+                    width: 10%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .subscribe-form form input {
+                    width: 60%;
+                    height: 30px;
+                }
+
+                form button {
+                    margin-left: 5px;
+                    height: 30px;
+                    width: 30px;
+                    font-size: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: chocolate;
+                }
+
+
+                .footer-bottom {
+                    padding: 2%;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                @media (max-width:650px) {
+
+                    .menu {
+                    padding: 3% 5%;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .food-item {
+                    position: relative;
+                    height: 30vh;
+                    width: 60%;
+                    margin: 5% auto;
+                }
+
+                .food-item:hover {
+                    height: 30vh;
+                    width: 60%;
+                }
+
+                .food-item img {
+                    filter: grayscale(1);
+                    width: 90%;
+                    position: absolute;
+                    top: -30%;
+                    left: -20%;
+                }
+
+
+                    footer p { display: none;}
+                    .footer-top {
+                        padding: 0 2%;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-areas: 
+                        "form address"
+                        "form contact"
+                        "form faqs";
+                    }
+
+                    .subscribe-form form input {width: 75%; }
+                    .subscribe-form {grid-area: form;}
+
+                    .footer-address {grid-area: address;}
+
+                    .footer-contact {grid-area: contact;}
+
+                    .footer-faqs {grid-area: faqs;}
+                }
+    </style>
+
+    <title>Beta Food</title>
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <h3><a href="index.html" class="logo"><span class="logo-half">Beta</span>Food</a></h3>
+            <div class="dropdown">
+                <p class="menu-icon"><img src="images/menu.png" alt=""></p>
+                <ul class="menu-item">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="html/menu.html">MENUS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="html/reservation.html" class="btn btn1">MAKE RESERVATION</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="main-page">
+            <div class="main-left">
+                <h1>
+                    Delicious &amp; Amazing <br>Restaurant Of Your City
+                </h1>
+                <p><a href="" class="btn btn2">BOOK A TABLE</a></p>
+            </div>
+            <div class="main-right">
+                <img src="images/food-img1.png" alt="food image">
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <section class="menu">
+        <div class="food-item">
+            <img src="images/pancakes.jpeg">
+            <h6>Korean Cuisine</h6>
+        </div>
+        <div class="food-item">
+            <img src="images/shawarma.jpeg">
+            <h6>Chinese Cuisine</h6>
+        </div>
+        <div class="food-item">
+            <img src="images/shrimps.jpeg">
+            <h6>Indian Cuisine</h6>
+        </div>
+        <div class="food-item">
+            <img src="images/veggies.jpeg">
+            <h6>Nigerian Cuisine</h6>
+        </div>
+        <div class="food-item">
+            <img src="images/pancakes.jpeg">
+            <h6>Cocktails</h6>
+        </div>
+        <div class="food-item">
+            <img src="images/shrimps.jpeg">
+            <h6>Energy Drinks</h6>
+        </div>
+        <div class="food-item">
+            <img src="images/pancakes.jpeg">
+            <h6>Soft Drinks</h6>
+        </div>
+        <div class="food-item">
+            <img src="images/alcohol2.jpg" width="20">
+            <h6>Alcohol</h6>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="subscribe-form">
+                <h6>Lorem, ipsum dolor.</h6>
+                <form action="">
+                    <input type="email" placeholder="&nbsp;&nbsp;example@beta.com" required>
+                    <button type="submit" ><div>&#9993;</div></button>
+                </form>
+            </div>
+
+            <div class="footer-address">
+                <h6>Lorem, ipsum dolor.</h6>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
+
+            <div class="footer-contact">
+                <h6>Lorem, ipsum dolor.</h6>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="footer-faqs">
+                <h6>Lorem, ipsum dolor.</h6>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            
+            <div class="social-links">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+
+            <div class="copyright">
+                © 2022 Beta Foods. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <div class="scroll-up"><a href="index.html"><strong>&uArr;</strong></a></div>
+</body>
+</html>

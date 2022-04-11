@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&family=Roboto:wght@400;500&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        p, a{
+            font-size: 13px;
+        }
+        header{
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(to left top, #141216, #131017, #120e19, #0f0d1a, #0c0b1c);
+            color: #ededed;
+            padding: 2% 5%;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        nav>ul{
+            display: flex;
+        }
+        nav>ul li{
+            list-style: none;
+            padding-left: 20px;
+        }
+        nav a{
+            color: inherit;
+        }
+        .logo{
+            font-size: 30px;
+        }
+        .logo-half{
+            color: #45de66;
+        }
+        .btn1{
+            background: #ededed;
+            color: #0c0b1c;
+            padding: 10px;
+            border-radius: 15px;
+            transition: 1s;
+        }
+        .btn1:hover{
+            background: #45de66;
+            color: #ededed;
+        }
+
+       
+     
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        a.btn{
+            border-radius: 15px;
+            background: rgb(7, 6, 6);
+            color: #ededed;
+            padding: 10px;
+            box-shadow: 0 0 5px #ededed;
+        }
+        p{
+            font-size: 13px;
+        }
+        main{
+            padding: 4% 5%;
+            margin-top: -400px;
+        }
+        div{
+            line-height: 23px;
+        }
+        .menu-title{
+            text-align: center;
+        }
+        h1{
+            font-size: 50px;
+            margin-bottom: 100px;
+            color: #ededed;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+        }
+        .row .card{
+            text-align: center;
+            justify-content: center;
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            background-color: #ededed;
+            padding: 15px;
+            margin: 20px 20px 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 8px #000;
+            transition: transform 1s;
+        }
+        .row .card img{
+            max-width: inherit;
+            display: block;
+            text-align: center;
+        }
+        .row .card:hover{
+            transform: scale(1.2);
+        }
+        .row .card-text>div{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h3><a href="index.html" class="logo"><span class="logo-half">Beta</span>Food</a></h3>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="menu.html">MENUS</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="reservation.html" class="btn1">MAKE RESERVATION</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="menu-title">
+            <h1>MENU</h1>
+        </div>
+        <section class="row">
+            <div class="card">
+                <h4>AMERICAN CUISINE</h4>
+                <div class="card-text">
+                    <div><p>Fish tacos</p><p class="price"> &#8358;1800</p></div>
+                    <div><p>Lobster mac and cheese </p><p class="price"> &#8358;2000</p></div>
+                    <div><p>Beef tartare</p><p class="price"> &#8358;2400</p></div>
+                    <div><p>Cheesesteak</p><p class="price"> &#8358;1400</p></div>
+                    <div><p>Fajitas</p><p class="price"> &#8358;2400</p></div>
+                    <div><p>Pancakes</p><p class="price"> &#8358;500</p></div>
+                </div>
+                <img src="../images/food13.jpg" alt="">
+                <p><a href="reservation.html" class="btn">Make Reservation</a></p>
+            </div>
+            <div class="card">
+                <h4>INDIAN CUISINE</h4>
+                <div class="card-text">
+                    <div><p>Aloo gobi</p><p class="price">&#8358;2000</p></div>
+                    <div><p>Chana Masala</p><p class="price"> &#8358;1900</p></div>
+                    <div><p>Biryani</p><p class="price"> &#8358;1750</p></div>
+                    <div><p>Chicken curry</p><p class="price"> &#8358;1400</p></div>
+                    <div><p>Kofta</p><p class="price"> &#8358;1500</p></div>
+                    <div><p>Korma</p><p class="price"> &#8358;2500</p></div>
+                    <div><p>Kebab</p><p class="price"> &#8358;1400</p></div>
+                </div>
+                <img src="../images/food2.jpg" alt="">
+                <p><a href="reservation.html" class="btn">Make Reservation</a></p>
+            </div>
+            <div class="card">
+                <h4>KOREAN CUISINE</h4>
+                <div class="card-text">
+                    <div><p>Bulgogi(mar. beef barbecue)</p><p class="price"> &#8358;1400</p></div>
+                    <div><p>Japchae(stir-fried noodles)</p><p class="price"> &#8358;1400</p></div>
+                    <div><p>Bibimbap(mixed rice)</p><p class="price"> &#8358;2000</p></div>
+                    <div><p>Rameyeon(noodles)</p><p class="price"> &#8358;1500</p></div>
+                    <div><p>Samgyeopsal(pork strips)</p><p class="price"> &#8358;1450</p></div>
+                    <div><p>Kimchi(fermented vegetables)</p><p class="price"> &#8358;1900</p></div>
+                    <div><p>Ddukbokki(spicy rice cake)</p><p class="price"> &#8358;1800</p></div>
+                </div>
+                <img src="../images/food3.jpg" alt="">
+                <p><a href="reservation.html" class="btn">Make Reservation</a></p>
+            </div>
+            <div class="card">
+                <h4>CHINESE CUISINE</h4>
+                <div class="card-text">
+                    <div><p>Kung pao Chicken </p><p class="price"> &#8358;2000</p></div>
+                    <div><p>Ma po Tofu</p><p class="price"> &#8358;1200</p></div>
+                    <div><p>Peking Roasted Duck</p><p class="price"> &#8358;2000</p></div>
+                    <div><p>Sweet & Sour Pork</p><p class="price"> &#8358;1300</p></div>
+                    <div><p>Hot Pot</p><p class="price"> &#8358;1300</p></div>
+                    <div><p>Dim Sum</p><p class="price"> &#8358;1400</p></div>
+                    <div><p>Dumplings</p><p class="price"> &#8358;1500</p></div>
+                </div>
+                <img src="../images/food4.jpg" alt="">
+                <p><a href="reservation.html" class="btn">Make Reservation</a></p>
+            </div>
+            <div class="card">
+                <h4>NIGERIAN CUISINE</h4>
+                <div class="card-text">
+                    <div><p>Jollof & Fried Rice</p><p class="price"> &#8358;1500</div>
+                    <div><p>Amala with Ewedu</p><p class="price"> &#8358;1200</p></div>
+                    <div><p>Pounded Yam and Efo</p><p class="price"> &#8358;1500</p></div>
+                    <div><p>Nkwobi</p><p class="price"> &#8358;1000</p></div>
+                    <div><p>Peppersoup(goat meat,Catfish,etc..)</p><p class="price"> &#8358;2000</p></div>
+                    <div><p>Yam Porridge</p><p class="price"> &#8358;1000</p></div>
+                    <div><p>Chicken & Chips</p><p class="price"> &#8358;1500</p></div>
+                </div>
+                <img src="../images/food5.jpg" alt="">
+                <p><a href="reservation.html" class="btn">Make Reservation</a></p>
+            </div>
+            </div>
+            <div class="card">
+                <h4>COCKTAILS</h4>
+                <div class="card-text">
+                    <div><p>Pisco Punch</p><p class="price"> &#8358;500</p></div>
+                    <div><p>SideCar</p><p class="price"> &#8358;600</p></div>
+                    <div><p>Corpse Reviver#2</p><p class="price"> &#8358;700</p></div>
+                    <div><p>Blood & Sand</p><p class="price"> &#8358;400</p></div>
+                    <div><p>Tommy's Margarita</p><p class="price"> &#8358;500</p></div>
+                    <div><p>Bobby Burns</p><p class="price"> &#8358;700</p></div>
+                    <div><p>Ti' Punch</p><p class="price"> &#8358;600</p></div>
+                </div>
+                <img src="../images/cocktail.jpeg" alt="">
+                <p><a href="reservation.html" class="btn">Make Reservation</a></p>
+            </div>
+            <div class="card">
+                <h4>ENERGY DRINKS</h4>
+                <div class="card-text">
+                    <div><p>Monster</p><p class="price"> &#8358;500</p></div>
+                    <div><p>Red Bull</p><p class="price"> &#8358;400</p></div>
+                    <div><p>Power Horse</p><p class="price"> &#8358;500</p></div>
+                    <div><p>NOS</p><p class="price"> &#8358;400</p></div>
+                    <div><p>RockStar</p><p class="price"> &#8358;400</p></div>
+                    <div><p>Fearless</p><p class="price"> &#8358;200</p></div>
+                    <div><p>Predator</p><p class="price"> &#8358;200</p></div>
+                </div>
+                <img src="../images/energy.jpg" alt="">
+                <p><a href="reservation.html" class="btn">Make Reservation</a></p>
+            </div>
+            <div class="card">
+                <h4>SOFT DRINKS</h4>
+                <div class="card-text">
+                    <div><p>Coca-Cola</p><p class="price"> &#8358;159</p></div>
+                    <div><p>Pepsi</p><p class="price"> &#8358;159</p></div>
+                    <div><p>Fanta</p><p class="price"> &#8358;159</p></div>
+                    <div><p>Diet Coke</p><p class="price"> &#8358;220</p></div>
+                    <div><p>Mountain Dew</p><p class="price"> &#8358;159</p></div>
+                    <div><p>Malta Guinness</p><p class="price"> &#8358;250</p></div>
+                    <div><p>Maltina</p><p class="price"> &#8358;250</p></div>
+                </div>
+                <img src="../images/mainsoftdrink.jpeg" alt="">
+                <p><a href="reservation.html" class="btn">Make Reservation</a></p>
+            </div>
+            <div class="card">
+                <h4>COFFEE</h4>
+                <div class="card-text">
+                    <div><p>Cafe Mocha</p><p class="price"> &#8358;100</p></div>
+                    <div><p>Cappuccino</p><p class="price"> &#8358;100</p></div>
+                    <div><p>Vanilla Latte</p><p class="price"> &#8358;80</p></div>
+                    <div><p>Americano</p><p class="price"> &#8358;150</p></div>
+                    <div><p>Espresso</p><p class="price"> &#8358;180</p></div>
+                    <div><p>Iced Latte</p><p class="price"> &#8358;120</p></div>
+                    <div><p>Iced Au Lat</p><p class="price"> &#8358;145</p></div>
+                </div>
+                <img src="../images/tea.jpg" alt="">
+                <p><a href="reservation.html"class="btn">Make Reservation</a></p>
+            </div>
+            <div class="card">
+                <h4>TEA & SMOOTHIES</h4>
+                <div class="card-text">
+                    <div><p>Hot Tea</p><p class="price"> &#8358;150</p></div>
+                    <div><p>Iced Tea</p><p class="price"> &#8358;100</p></div>
+                    <div><p>Hot Chocolate</p><p class="price"> &#8358;130</p></div>
+                    <div><p>Steamer</p><p class="price"> &#8358;150</p></div>
+                    <div><p>Mixed Fruit Smoothie</p><p class="price"> &#8358;200</p></div>
+                    <div><p>Banana Smoothie</p><p class="price"> &#8358;145</p></div>
+                    <div><p>Strawberry Smoothie</p><p class="price"> &#8358;125</p></div>
+                </div>
+                <img src="../images/smoothie2.jpg" alt="">
+                <p><a href="reservation.html" class="btn">Make Reservation</a></p>
+            </div>
+            <div class="card">
+                <h4>ALCOHOLS</h4>
+                <div class="card-text">
+                    <div><p>Beer</p><p class="price"> &#8358;1000</p></div>
+                    <div><p>Vodka</p><p class="price"> &#8358;30000</p></div>
+                    <div><p>Rum</p><p class="price"> &#8358;35000</p></div>
+                    <div><p>Whisky</p><p class="price"> &#8358;30000</p></div>
+                    <div><p>Champagne</p><p class="price"> &#8358;40000</p></div>
+                    <div><p>Read Wine</p><p class="price"> &#8358;20000</p></div>
+                    <div><p>Soju</p><p class="price"> &#8358;30000</p></div>
+                </div>
+                <img src="../images/alcohol2.jpg" alt="">
+                <p><a href="reservation.html" class="btn">Make Reservation</a></p>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>
